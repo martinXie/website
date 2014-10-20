@@ -1,0 +1,44 @@
+#this project is about storage and searching about the patient info.
+
+#the author info 
+        name            email                   qq
+        martinXie       xzdong90@gmail.com      584345604
+        hellokitty      richardxxx0x@gmail.com  1766284456
+
+
+#table0      Accounts 
+    Field           Describe        Type        Constraint
+    User
+    UserType
+    Password
+    
+    
+    
+# table1     Basic Info of Patients
+    Field           Describe        Type                Constraint
+    PatientsID      病人编号        unsigned  int       
+    Name            患者姓名        
+    Gender          性别                                
+    Age             年龄                                
+    InpatientNumber 住院号   
+    TelephoneNumber 联系方式
+    Address         地址
+    IOL             人工晶状体                          
+    SurgeryTime     手术时间
+    Operator        手术医师
+    
+#table2         Diagnose Records of Patients
+    Filed               Describe        Type            Constrait
+    RecordID            检查编号                     
+    PatientsID          病人编号
+    Date                检查时间                        
+    Eye                 眼别                            
+    VA                  视力
+    SphericalAberration 球面  
+    Correct vision      验光单          image
+    I_trace                             image
+    CorneaEndothelium   角膜内皮        image
+    CorneaThickness     角膜厚度        image
+    Protomerite         前节照          image
+    ContrastSensitivity 对比敏感度      image
+    remarks             备注
