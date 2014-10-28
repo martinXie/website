@@ -15,26 +15,26 @@
     
     
 # table1     Basic Info of Patients
-    Field           Describe        Type                Constraint
-    PatientsID      病人编号        unsigned  int       
-    Name            患者姓名        
-    Gender          性别                                
-    Age             年龄                                
+    Field           Describe        Type                Constraint	Note
+    PatientsID      病人编号        unsigned  int       		searchable
+    Name            患者姓名        					searchable
+    Gender          性别                                 		searchable
+    Age             年龄                               			searchable 
     InpatientNumber 住院号   
-    TelephoneNumber 联系方式
-    Address         地址
-    IOL             人工晶状体                          
+    TelephoneNumber 联系方式						
+    Address         地址						searchable	
+    IOL             人工晶状体                          		searchable
     SurgeryTime     手术时间
     Operator        手术医师
     
 #table2         Diagnose Records of Patients
-    Filed               Describe        Type            Constrait
-    RecordID            检查编号                     
-    PatientsID          病人编号
-    Date                检查时间                        
-    Eye                 眼别                            
-    VA                  视力
-    SphericalAberration 球面  
+    Filed               Describe        Type            Constrait	Note
+    RecordID            检查编号                     			
+    PatientsID          病人编号					
+    Date                检查时间                        		searchable
+    Eye                 眼别                           			searchable	 
+    VA                  视力						searchable
+    SphericalAberration 球面 						searchable 
     Correct vision      验光单          image
     I_trace                             image
     CorneaEndothelium   角膜内皮        image
