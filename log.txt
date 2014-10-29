@@ -1,0 +1,4 @@
+#2014/10/30 00:08
+issue  
+	how to fill the attributes of the fields in talbe.(name, type, lenths/value, default value, null, index, MIM, collation, content, .....)
+	don't fimilar with the data type, can't use the correct data type to define a field. 
