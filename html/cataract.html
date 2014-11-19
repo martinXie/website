@@ -1,183 +1,149 @@
 <!--白内障资料录入页面-->
 <html>
-  <head>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-  </head>
-  <body>
-    <h4>白内障资料录入</h4>
-    <div class="container">
-    <div class="row">
-        <div class="row-md-5">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                     <h3 class="panel-title">基本信息</h3>
-                </div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label for="username" class="col-sm-1 control-label">姓名</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="username" />
-                            </div>
-                            
-                            <label for="age" class="col-sm-1 control-label">年龄</label>
-                            <div class="col-sm-2">
-                                <input type="number" class="form-control" id="age"/>
-                            </div>
-                            
-                            <label for="ID" class="col-sm-1 control-label">ID</label>
-                            <div class="col-sm-2">
-                              <input type="number" class="form-control" id="id"/>
-                            </div>
-                            
-                            <label for="Hospital number" class="col-sm-1 control-label">住院号</label>
-                            <div class="col-sm-2">
-                              <input type="text" class="form-control" id="hospital_number"/>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="sex" class="col-sm-1 control-label">性别</label>
-                            <div class="col-sm-2">
-                              <div class="input-group" id="datepicker">
-                                      <select id="sex" class="form-control">
-                                          <option>男</option>
-                                          <option>女</option>
-                                      </select>
-                              </div>
-                            </div>
-                            
-                            <label for="The operative time" class="col-sm-1 control-label">手术时间</label>
-                            <div class="col-sm-2">
-                              <input type="text" class="form-control" id="operative_time"/>
-                            </div>
-                            
-                            <label for="contact" class="col-sm-1 control-label">联系方式</label>
-                            <div class="col-sm-2">
-                              <input type="text" class="form-control" id="contact"/>
-                            </div>
+<head>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+<h4>白内障资料录入</h4>
+<div class="container">
+	<div class="row">
+		<div class="row-md-5">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">基本信息</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form" method="post" action="onSubmitBasicInfo.php">
+						<div class="form-group">
+							<label for="username" class="col-sm-1 control-label">姓名</label>
+							<div class="col-sm-2">
+								<input type="text" name="username" class="form-control" id="username" />
+							</div>
 
-                            <label for="IOL" class="col-sm-1 control-label">IOL</label>
-                            <div class="col-sm-2">
-                              <input type="text" class="form-control" id="IOL"/>
-                            </div>
+							<label for="age" class="col-sm-1 control-label">年龄</label>
+							<div class="col-sm-2">
+								<input type="number" name="age" class="form-control" id="age"/>
+							</div>
+
+							<label for="sex" class="col-sm-1 control-label">性别</label>
+							<div class="col-sm-2">
+								<div class="input-group" id="datepicker">
+									<select id="sex" name="sex" class="form-control">
+										<option value="M">男</option>
+										<option value="F">女</option>
+									</select>
+								</div>
+							</div>
+
+							<label for="contact" class="col-sm-1 control-label">联系方式</label>
+							<div class="col-sm-2">
+								<input type="text" name="contact" class="form-control" id="contact"/>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="Hospital number" class="col-sm-1 control-label">住院号</label>
+							<div class="col-sm-2">
+								<input type="number" name="hospital_number" class="form-control" id="hospital_number"/>
+							</div>
+
+							<label for="operative_time" class="col-sm-1 control-label">手术时间</label>
+							<div class="col-sm-2">
+								<input type="date" name="operative_time" class="form-control" id="operative_time"/>
+							</div>
+						
+							<label for="IOL" class="col-sm-1 control-label">IOL</label>
+							<div class="col-sm-2">
+								<input type="text" name="IOL" class="form-control" id="IOL"/>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="address" class="col-sm-1 control-label">Address</label>
+							<div class="col-sm-2">
+								<input type="text" name="address" class="form-control" id="address"/>
+							</div>
+
+							<label for="operator" class="csol-sm-1 control-label">Operator</label>
+							<div class="col-sm-2">
+								<input type="text" name="operator" class="form-control" id="operator"/>
+							</div>
+
+							<label for="submit" class="csol-sm-1 control-label">submit</label>
+							<div class="col-sm-2">
+								<input type="submit" class="form-control" id="submit"/>
+							</div>
+						</div>
+					</form>			    
+				</div> 
+			</div>  
+		</div>
+		<div class="row-md-5">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">病例信息</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="check time" class="col-sm-2 control-label">检查时间</label>
+							<div class="col-sm-2">
+								<input type="text" class="form-control" id="check_time" />
+							</div>
+							<label for="check time" class="col-sm-2 control-label">眼别</label>
+							<div class="col-sm-2">
+								<div class="input-group" id="datepicker">
+									<select id="eye" class="form-control">
+										<option>左</option>
+										<option>右</option>
+									</select>
+								</div>
+							</div>
+
+							<label for="Optometry list" class="col-sm-2 control-label">验光单</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="check_time" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="corneal endothelium" class="col-sm-2 control-label">角膜内皮</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="corneal_endothelium" />
+							</div>
+
+							<label for="corneal thickness" class="col-sm-2 control-label">角膜厚度</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="corneal_thickness" />
+							</div>
+							<label for="xxx" class="col-sm-2 control-label">xxx</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="xxx" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="qian jie zhao" class="col-sm-2 control-label">前节照</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="qian_jie_zhao" />
+							</div>
+
+							<label for="cs" class="col-sm-2 control-label">CS</label>
+							<div class="col-sm-2">
+								<input type="file" class="form-control" id="cs" />
+							</div>
+
+							<label for="remarks" class="col-sm-1 control-label">备注</label>
+							<div class="col-sm-2">
+								<textarea name="message" id="message" class="input-xlarge span2" rows="5"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
-
-			<div class="form-group">
-                            <label for="Address" class="col-sm-1 control-label">Address</label>
-                            <div class="col-sm-2">
-                            <input type="text" class="form-control" id="Address"/>
-                            </div>
-
-                            <label for="Operator" class="csol-sm-1 control-label">Operator</label>
-                            <div class="col-sm-2">
-                              <input type="text" class="form-control" id="Operator"/>
-                            </div>
-			    
-			    <label for="submit" class="csol-sm-1 control-label">submit</label>
-			    <div class="col-sm-2">
-			      <input type="submit" class="form-control" id="submit"/>
-			    </div>
-			</div>			    
-	</div> <!--row-->
-     
-        
-        <div class="row-md-5">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                     <h3 class="panel-title">病例信息</h3>
-                </div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label for="check time" class="col-sm-2 control-label">检查时间</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="check_time" />
-                            </div>
-                            <!--todo-->
-                            <label for="check time" class="col-sm-2 control-label">眼别</label>
-                            <div class="col-sm-2">
-                                <div class="input-group" id="datepicker">
-                                      <select id="eye" class="form-control">
-                                          <option>左</option>
-                                          <option>右</option>
-                                      </select>
-                              </div>
-                            </div>
-                            
-                            <label for="Optometry list" class="col-sm-2 control-label">验光单</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="check_time" />
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="corneal endothelium" class="col-sm-2 control-label">角膜内皮</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="corneal_endothelium" />
-                            </div>
-                            
-                            <label for="corneal thickness" class="col-sm-2 control-label">角膜厚度</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="corneal_thickness" />
-                            </div>
-                            <!--todo-->
-                            <label for="xxx" class="col-sm-2 control-label">xxx</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="xxx" />
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="qian jie zhao" class="col-sm-2 control-label">前节照</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="qian_jie_zhao" />
-                            </div>
-                            
-                            <label for="cs" class="col-sm-2 control-label">CS</label>
-                            <div class="col-sm-2">
-                                <input type="file" class="form-control" id="cs" />
-                            </div>
-
-                            <label for="remarks" class="col-sm-1 control-label">备注</label>
-                            <div class="col-sm-2">
-                                <textarea name="message" id="message" class="input-xlarge span2" rows="5"></textarea>
-                            </div>
-                        </div>
-                </div>
-        
-        
-        <div class="row-md-5">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                     <h3 class="panel-title">新增</h3>
-                     <div class="btn-group btn-group-xs pull-right"> <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a>
- <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span></a>
-
-                    </div>
-                    <div class="clearfix">
-                    </div>
-                </div>
-        
-                
-            </div>
-        </div>
-        
-
-      <button class="btn btn-success" onclick="save()" id="cataract_save" type="button">保存</button>
-      <button class="btn btn-success" onclick="location.href='onsubmit.html'" id="cataract_submit" type="button">提交</button>
-
-        
-
-
-    </div>
+		</div>
+	</div>
 </div>
-
-
-
-<div class="footer">
-         <p>©2014 xxx<a target="_blank" href="mailto:xxx">&nbsp;&nbsp;邮箱</a></p>
-      </div>
-  </body>
+</body>
 </html>
