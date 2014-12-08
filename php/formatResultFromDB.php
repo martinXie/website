@@ -23,7 +23,7 @@ if ($conn->connect_error)
 
 $sql = "SELECT id, firstname, lastname FROM MyGuests";
 $result = $conn->query($sql);
-
+//单引号将所有内容当字符输出
 echo '
 <table class="table table-striped">
    <caption>数据库查询结果</caption>
@@ -43,9 +43,11 @@ if ($result->num_rows > 0)
 	while($row = $result->fetch_assoc()) 
 	{
 //		echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"];
+		
+		//双引号会解析内部的变量
 		echo"
 		<tr>
-			<td>$row[id]</td>
+			<td>$row[id]</td>									//索引可以不用加双引号，也可以加，见上一行代码
 			<td>$row[firstname]</td>
 			<td>$row[lastname]</td>
 		</tr>
